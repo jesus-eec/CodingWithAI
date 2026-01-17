@@ -13,13 +13,13 @@ pregunta = input("¿Cuál es tu pregunta para ChatGPT? ")
 
 # 4) Enviar la pregunta a OpenAI
 respuesta = cliente.chat.completions.create(
-    modelo="gpt-5.2",
-    mensajes=[
+    model="gpt-5.2",
+    messages=[
         {"role": "user", "content": pregunta}
     ]
 )
 
 # 5) Mostrar respuesta
 print("\nRespuesta de ChatGPT:\n")
-print(respuesta.choices[0].mensajes.content)
+print(respuesta.choices[0].message.content)
 
